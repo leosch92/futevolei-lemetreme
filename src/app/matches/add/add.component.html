@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>Adicionar Partida</h1>
+
+  <form [formGroup]="addForm" (ngSubmit)="onAddMatch()">
+    <fieldset class="form-group" formGroupName="winners">
+      <legend>Dupla Ganhadora</legend>
+      <div class="form-row">
+        <div class="col">
+          <select class="form-control" formControlName="left" placeholder="Esquerda">
+            <option *ngFor="let option of playersOptions" [value]="option.value">{{ option.label }}</option>
+          </select>
+          <small class="form-text text-muted">Jogou no lado esquerdo</small>
+        </div>
+        <div class="col">
+          <select class="form-control" formControlName="right" placeholder="Direita">
+            <option *ngFor="let option of playersOptions" [value]="option.value">{{ option.label }}</option>
+          </select>
+          <small class="form-text text-muted">Jogou no lado direito</small>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-group" formGroupName="losers">
+      <legend>Dupla Perdedora</legend>
+      <div class="form-row">
+        <div class="col">
+          <select class="form-control" formControlName="left">
+            <option *ngFor="let option of playersOptions" [value]="option.value">{{ option.label }}</option>
+          </select>
+          <small class="form-text text-muted">Jogou no lado esquerdo</small>
+        </div>
+        <div class="col">
+          <select class="form-control" formControlName="right">
+            <option *ngFor="let option of playersOptions" [value]="option.value">{{ option.label }}</option>
+          </select>
+          <small class="form-text text-muted">Jogou no lado direito</small>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-group" formGroupName="result">
+      <legend>Placar</legend>
+      <div class="form-row">
+        <div class="col">
+         <input type="text" formControlName="winner" class="form-control" placeholder="Ganhador">
+        </div>
+        <div class="col">
+         <input type="text" formControlName="loser" class="form-control" placeholder="Perdedor">
+        </div>
+      </div>
+    </fieldset>
+
+    <button class="btn btn-success" type="submit" [disabled]="addForm.invalid">Salvar</button>
+
+  </form>
+</div>

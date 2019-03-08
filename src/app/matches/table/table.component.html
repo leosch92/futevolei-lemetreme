@@ -1,0 +1,26 @@
+<div class="table-responsive">
+  <table *ngIf="players" class="table">
+    <thead>
+      <tr>
+        <th colspan="2">Ganhadores</th>
+        <th colspan="2">Perdedores</th>
+        <th rowspan="2">Placar</th>
+      </tr>
+      <tr>
+        <th>Esquerda</th>
+        <th>Direita</th>
+        <th>Esquerda</th>
+        <th>Direita</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let match of matches">
+        <td> {{ match.winners.left | playerName:players }} </td>
+        <td> {{ match.winners.right | playerName:players }} </td>
+        <td> {{ match.losers.left | playerName:players }} </td>
+        <td> {{ match.losers.right | playerName:players }} </td>
+        <td> {{ match.result | result }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

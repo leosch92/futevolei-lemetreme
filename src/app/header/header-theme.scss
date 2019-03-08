@@ -1,0 +1,16 @@
+@import '~@angular/material/theming';
+
+@mixin header-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  @keyframes navlink-clicked {
+    from {background-color: mat-color($primary)}
+    to {background-color: mat-color($primary, 400)}
+  }
+
+  .navbar .navlink-active {
+    animation-name: navlink-clicked;
+    animation-duration: 1s;
+    background-color: mat-color($primary, 400);
+  }
+}

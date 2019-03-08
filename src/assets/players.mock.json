@@ -1,0 +1,18 @@
+{
+    "players": [
+        {
+            "id": 1,
+            "name": "Leleo"
+        },
+        {
+            "id": 2,
+            "name": "Artur"
+        },{
+            "id": 3,
+            "name": "Bon"
+        },{
+            "id": 4,
+            "name": "Falcão"
+        }
+    ]
+}

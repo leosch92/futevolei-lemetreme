@@ -1,0 +1,30 @@
+[
+    {
+        "winners": {
+            "left": "Leleo",
+            "right": "Falcão"
+        },
+        "losers": {
+            "left": "Bon",
+            "right": "Artur"
+        },
+        "result": {
+            "winner": 18,
+            "loser": 15
+        }
+    },
+    {
+        "winners": {
+            "left": "Artur",
+            "right": "Falcão"
+        },
+        "losers": {
+            "left": "Bon",
+            "right": "Leleo"
+        },
+        "result": {
+            "winner": 18,
+            "loser": 12
+        }
+    }
+]
